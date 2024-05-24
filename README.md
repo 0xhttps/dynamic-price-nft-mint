@@ -38,6 +38,10 @@ DynamicPriceMint is an ERC721A token contract with dynamic pricing based on a Un
     npm install --save-dev hardhat
     ```
 
+#### Note
+
+Some manual changes to `@uniswap/v3-core` may be needed. I cannot remember lol
+
 ### Configuration
 
 1. **Create Hardhat Project**: If not already done, initialize a Hardhat project.
