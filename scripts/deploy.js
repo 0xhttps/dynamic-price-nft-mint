@@ -5,7 +5,7 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
   const CONTRACT = await ethers.getContractFactory("dynamicPriceMint");
-  const contract = await DGN.deploy();
+  const contract = await CONTRACT.deploy();
 
   console.log("Contract address:", contract.address);
 }
