@@ -29,12 +29,6 @@ DynamicPriceMint is an ERC721A token contract with dynamic pricing based on a Un
 2. **Install Dependencies**
 
     ```bash
-    npm install
-    ```
-
-    If you encounter dependency conflicts, use the `--legacy-peer-deps` flag:
-
-    ```bash
     npm install --legacy-peer-deps
     ```
 
@@ -42,15 +36,6 @@ DynamicPriceMint is an ERC721A token contract with dynamic pricing based on a Un
 
     ```bash
     npm install --save-dev hardhat
-    ```
-
-4. **Install Additional Dependencies**
-
-    ```bash
-    npm install @openzeppelin/contracts
-    npm install erc721a
-    npm install @uniswap/v3-core
-    npm install --save-dev @nomiclabs/hardhat-ethers
     ```
 
 ### Configuration
