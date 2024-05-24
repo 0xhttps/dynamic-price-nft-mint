@@ -1,11 +1,18 @@
-require("@nomiclabs/hardhat-waffle");
+async function main() {
+  const [deployer] = await ethers.getSigners();
+  console.log("Deploying contracts with the account:", deployer.address);
 
-module.exports = {
-  solidity: "0.8.25",
-  networks: {
-    rinkeby: {
-      url: "https://rinkeby.infura.io/v3/YOUR_INFURA_PROJECT_ID",
-      accounts: ["YOUR_PRIVATE_KEY"]
-    }
-  },
-};
+  console.log("Account balance:", (await deployer.getBalance()).toString());
+
+  const CONTRACT = await ethers.getContractFactory("dynamicPriceMint");
+  const contract = await DGN.deploy();
+
+  console.log("Contract address:", contract.address);
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
